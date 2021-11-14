@@ -1,0 +1,9 @@
+runtime: php81
+
+env_variables:
+  ## Put production environment variables here.
+  APP_KEY=base64:B3R/pwrlLd7VyRuHnSOdQw4Q4pM7f4C8LjBly7bBSQY=
+  APP_STORAGE: /tmp
+  VIEW_COMPILED_PATH: /tmp
+  SESSION_DOMAIN=172.20.10.5
+  APP_NAME="Rookout Debug Competition"
