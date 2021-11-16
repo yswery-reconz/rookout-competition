@@ -27,3 +27,26 @@ resources/view/ # For all view templates (Blade)
 ```
 
 To recompile js/css you will need to run ` npm run dev`
+
+## Running even generator
+You will need to run the scheduler to which runs and executes all the events continually 
+```bash
+
+./vendor/bin/sail artisan schedule:run
+```
+
+To manually run the event generator you can issue the following command which will run one single cycle 
+```bash
+./vendor/bin/sail artisan rookout:send-debug-events
+```
+
+## Investigation App Endpoint
+Since this application can deal with many investigation applications, it is all stored in DB
+See the following files for the pre-populated data:
+```bash
+# The pre populated events 
+database/migrations/2021_11_10_142134_create_debug_events_table.php
+
+# The pre populated investigation app (Will probably need to change endpoint to suit)
+database/migrations/2021_11_10_141904_create_investigation_apps_table.php
+```
